@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Заповнювач Укрпошти (Міжнародні)",
+  "version": "0.1.1",
+  "description": "Заповнює форму «Міжнародні відправлення → додати» одним натисканням з тексту в довільній формі + збережених стандартних значень.",
+  "default_locale": "uk",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://ok.ukrposhta.ua/ua/lk/international/add/*",
+        "https://ok.ukrposhta.ua/ua/lk_old/international/add/*"
+      ],
+      "js": ["src/content/index.ts"],
+      "css": ["src/ui/styles.css"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "web_accessible_resources": []
+}

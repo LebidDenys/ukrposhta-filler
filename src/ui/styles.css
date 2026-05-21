@@ -1,0 +1,356 @@
+#upx-filler-panel,
+#upx-filler-panel * {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+#upx-filler-panel {
+  all: initial;
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 2147483000;
+  width: 360px;
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+  background: #ffffff;
+  color: #111827;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+#upx-filler-panel.upx-collapsed .upx-panel-body {
+  display: none;
+}
+
+.upx-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: #0050a0;
+  color: #ffffff;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.upx-panel-title {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.upx-chevron {
+  background: transparent;
+  border: 0;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.upx-chevron:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.upx-panel-body {
+  padding: 12px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.upx-textarea {
+  width: 100%;
+  min-height: 110px;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.4;
+  resize: vertical;
+  outline: none;
+}
+
+.upx-textarea:focus {
+  border-color: #0050a0;
+  box-shadow: 0 0 0 2px rgba(0, 80, 160, 0.2);
+}
+
+.upx-summary {
+  background: #f3f4f6;
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+
+.upx-summary-heading {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #4b5563;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.upx-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 6px;
+}
+
+.upx-chip {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 11px;
+  color: #1f2937;
+}
+
+.upx-chip-label {
+  color: #6b7280;
+  margin-right: 4px;
+  font-weight: 500;
+}
+
+.upx-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.upx-btn {
+  flex: 1;
+  appearance: none;
+  border: 0;
+  border-radius: 6px;
+  padding: 9px 12px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.1s ease, transform 0.05s ease;
+}
+
+.upx-btn-primary {
+  background: #0050a0;
+  color: #ffffff;
+}
+
+.upx-btn-primary:hover { background: #003e7e; }
+.upx-btn-primary:active { transform: translateY(1px); }
+
+.upx-btn-secondary {
+  background: #ffffff;
+  color: #0050a0;
+  border: 1px solid #0050a0;
+}
+
+.upx-btn-secondary:hover { background: #eef5fc; }
+
+.upx-banner {
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 12px;
+  display: none;
+  position: relative;
+}
+
+.upx-banner.upx-banner-visible { display: block; }
+
+.upx-banner-close {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  background: transparent;
+  border: 0;
+  font-size: 16px;
+  cursor: pointer;
+  color: inherit;
+  line-height: 1;
+}
+
+.upx-banner-section { margin-bottom: 6px; }
+.upx-banner-section:last-child { margin-bottom: 0; }
+
+.upx-banner-heading {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.upx-banner-list {
+  list-style: disc;
+  padding-left: 18px;
+  margin: 0;
+}
+
+.upx-banner-list li { margin-bottom: 2px; }
+
+.upx-banner-ok {
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #6ee7b7;
+}
+
+.upx-banner-warn {
+  background: #fffbeb;
+  color: #78350f;
+  border: 1px solid #fcd34d;
+}
+
+.upx-banner-err {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+}
+
+.upx-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2147483100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upx-modal {
+  background: #ffffff;
+  color: #111827;
+  border-radius: 12px;
+  width: min(420px, 90vw);
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 14px;
+}
+
+.upx-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.upx-modal-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.upx-modal-close {
+  background: transparent;
+  border: 0;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  color: #4b5563;
+  padding: 4px 8px;
+}
+
+.upx-modal-close:hover { color: #111827; }
+
+.upx-modal-body {
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.upx-modal-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.upx-modal-row.upx-modal-row-inline {
+  flex-direction: row;
+  gap: 8px;
+}
+
+.upx-modal-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.upx-modal-input,
+.upx-modal-select {
+  width: 100%;
+  padding: 7px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 13px;
+  outline: none;
+  background: #ffffff;
+  color: inherit;
+}
+
+.upx-modal-input:focus,
+.upx-modal-select:focus {
+  border-color: #0050a0;
+  box-shadow: 0 0 0 2px rgba(0, 80, 160, 0.2);
+}
+
+.upx-radio-group {
+  display: flex;
+  gap: 14px;
+  margin-top: 2px;
+}
+
+.upx-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.upx-modal-section {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.upx-modal-section-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #4b5563;
+  letter-spacing: 0.05em;
+}
+
+.upx-modal-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+.upx-modal-warning {
+  background: #fffbeb;
+  color: #78350f;
+  border: 1px solid #fcd34d;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 12px;
+}
+
+.upx-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 12px 18px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.upx-modal-footer .upx-btn { flex: 0 0 auto; }

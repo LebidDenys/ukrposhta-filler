@@ -1,0 +1,23 @@
+{
+  "name": "ukrposhta-intl-filler",
+  "version": "0.1.1",
+  "description": "Chrome (MV3) extension that fills the Ukrposhta «Міжнародні відправлення → додати» form from a single free-form text block plus persisted parcel defaults.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite build --watch --mode development",
+    "build": "vite build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^2.0.0-beta.32",
+    "@types/chrome": "^0.0.287",
+    "@types/node": "^22.10.0",
+    "happy-dom": "^15.11.6",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.0",
+    "vitest": "^2.1.6"
+  }
+}
